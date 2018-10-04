@@ -1,0 +1,177 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3319834200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MyntraCommonStep.setup()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "1.Valid user with valid password",
+        "description": "",
+        "id": "myntra-login-functionality---1;1.valid-user-with-valid-password",
+        "after": [
+          {
+            "result": {
+              "duration": 77386400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MyntraCommonStep.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 42860500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Not a valid user",
+            "match": {
+              "location": "MyntraCommonStep.not_a_valid_user()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3975708900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User will browse to the site",
+            "match": {
+              "location": "MyntraCommonStep.user_wiil_browse_to_the_site()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2122148800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Myntra home page should display",
+            "match": {
+              "location": "MyntraHomePageStep.myntra_home_page_should_display()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2776269800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User will click login link",
+            "match": {
+              "location": "MyntraHomePageStep.user_will_click_login_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2020756900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Browser will display Login page",
+            "match": {
+              "location": "MyntraLoginpageStep.browser_will_display_Login_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 276321200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User will enter user email as \"ahmedsohel440@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ahmedsohel440@gmail.com",
+                  "offset": 31
+                }
+              ],
+              "location": "MyntraLoginpageStep.user_will_enter_user_email_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 225584400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User will enter password as \"Sohel@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sohel@123",
+                  "offset": 29
+                }
+              ],
+              "location": "MyntraLoginpageStep.user_wiil_enter_password_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 159255500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User will click login button",
+            "match": {
+              "location": "MyntraLoginpageStep.user_will_click_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2696940200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Home page will display",
+            "match": {
+              "location": "MyntraHomePageStep.home_page_will_display()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15151270900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "login success message display",
+            "match": {
+              "location": "MyntraHomePageStep.login_success_message_will_display()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Myntra login functionality - 1",
+    "description": "  This explain how verious login functionality will work",
+    "id": "myntra-login-functionality---1",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Myntrafeatures/Myntralogin.feature",
+    "tags": []
+  }
+]

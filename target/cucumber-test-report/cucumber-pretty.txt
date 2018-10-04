@@ -1,0 +1,14 @@
+Feature: Myntra login functionality - 1
+  This explain how verious login functionality will work
+
+  Scenario: 1.Valid user with valid password                     [90m# src/test/resources/Myntrafeatures/Myntralogin.feature:5[0m
+    [32mGiven [0m[32mNot a valid user[0m                                       [90m# MyntraCommonStep.not_a_valid_user()[0m
+    [32mWhen [0m[32mUser will browse to the site[0m                            [90m# MyntraCommonStep.user_wiil_browse_to_the_site()[0m
+    [32mThen [0m[32mMyntra home page should display[0m                         [90m# MyntraHomePageStep.myntra_home_page_should_display()[0m
+    [32mWhen [0m[32mUser will click login link[0m                              [90m# MyntraHomePageStep.user_will_click_login_link()[0m
+    [32mThen [0m[32mBrowser will display Login page[0m                         [90m# MyntraLoginpageStep.browser_will_display_Login_page()[0m
+    [32mWhen [0m[32mUser will enter user email as "[0m[32m[1mahmedsohel440@gmail.com[0m[32m"[0m [90m# MyntraLoginpageStep.user_will_enter_user_email_as(String)[0m
+    [32mAnd [0m[32mUser will enter password as "[0m[32m[1mSohel@123[0m[32m"[0m                  [90m# MyntraLoginpageStep.user_wiil_enter_password_as(String)[0m
+    [32mAnd [0m[32mUser will click login button[0m                             [90m# MyntraLoginpageStep.user_will_click_login_button()[0m
+    [32mThen [0m[32mHome page will display[0m                                  [90m# MyntraHomePageStep.home_page_will_display()[0m
+    [32mAnd [0m[32mlogin success message display[0m                            [90m# MyntraHomePageStep.login_success_message_will_display()[0m
