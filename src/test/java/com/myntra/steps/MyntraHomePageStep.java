@@ -17,6 +17,13 @@ public class MyntraHomePageStep extends MyntraBaseStep {
 	
 	
 		{
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		homePage.VerifyTitle();
 		}
 
