@@ -4,12 +4,12 @@ import java.util.concurrent.TimeUnit;
 
 import com.bddmyntra.framework.DriverFactory;
 import com.bddmyntra.framework.MyntraPropertyReaderService;
-import com.bddmyntra.framework.PageFactory;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
+import myntraPages.PageFactory;
 
 public class MyntraCommonStep extends MyntraBaseStep {
 	
@@ -18,6 +18,7 @@ public class MyntraCommonStep extends MyntraBaseStep {
 		
 		
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 		
 		}
 	
@@ -31,7 +32,8 @@ public class MyntraCommonStep extends MyntraBaseStep {
 		
 		
 		
-	}@Given("Not a valid user")
+	}
+	@Given("Not a valid user")
 	public void not_a_valid_user() {
 	   driver.manage().deleteAllCookies();
 	}

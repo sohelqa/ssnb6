@@ -24,8 +24,8 @@ public class MyntraLoginPage {
 	@FindBy(className="login-login-button")
 	private WebElement LoginButton;
 	
-	
-	
+	public static String emailaddress;
+	public static String password;
 	
 	public MyntraLoginPage() {
 	
@@ -41,17 +41,24 @@ public class MyntraLoginPage {
 		
 		emailTextbox.clear();
 		emailTextbox.sendKeys(emailaddress);
-		
+		MyntraLoginPage.emailaddress=emailaddress;
 		
 	}
 	
+	public static String emailAddress() {
+	return emailaddress;
+	}
+	
+	public static String password() {
+		return password;
+	}
 	
 	public void setPassWord(String password) {
 		
 		
 		passwordTextbox.clear();
 		passwordTextbox.sendKeys(password);
-		
+		MyntraLoginPage.password=password;
 		
 	}
 	
@@ -101,7 +108,7 @@ public class MyntraLoginPage {
 //			String invalidtext=invalidLogin.getText();
 			Boolean vl= invalidLogin.isDisplayed();
 			//System.out.println(invalidtext);
-			if(vl=true) 
+			if(vl==true) 
 				{
 				System.out.println("The User name or Password you Enter is incorrect");
 				}

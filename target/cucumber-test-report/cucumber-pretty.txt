@@ -12,3 +12,53 @@ Feature: Myntra login functionality - 1
     [32mAnd [0m[32mUser will click login button[0m                             [90m# MyntraLoginpageStep.user_will_click_login_button()[0m
     [32mThen [0m[32mHome page will display[0m                                  [90m# MyntraHomePageStep.home_page_will_display()[0m
     [32mAnd [0m[32mlogin success message display[0m                            [90m# MyntraHomePageStep.login_success_message_will_display()[0m
+
+  Scenario: 2.InValid user with valid password                           [90m# src/test/resources/Myntrafeatures/Myntralogin.feature:19[0m
+    [32mGiven [0m[32mNot a valid user[0m                                               [90m# MyntraCommonStep.not_a_valid_user()[0m
+    [32mWhen [0m[32mUser will browse to the site[0m                                    [90m# MyntraCommonStep.user_wiil_browse_to_the_site()[0m
+    [32mThen [0m[32mMyntra home page should display[0m                                 [90m# MyntraHomePageStep.myntra_home_page_should_display()[0m
+    [32mWhen [0m[32mUser will click login link[0m                                      [90m# MyntraHomePageStep.user_will_click_login_link()[0m
+    [32mThen [0m[32mBrowser will display Login page[0m                                 [90m# MyntraLoginpageStep.browser_will_display_Login_page()[0m
+    [32mWhen [0m[32mUser will enter user email as "[0m[32m[1mInvalid_ahmedsohel440@gmail.com[0m[32m"[0m [90m# MyntraLoginpageStep.user_will_enter_user_email_as(String)[0m
+    [32mAnd [0m[32mUser will enter password as "[0m[32m[1mSohel@123[0m[32m"[0m                          [90m# MyntraLoginpageStep.user_wiil_enter_password_as(String)[0m
+    [32mAnd [0m[32mUser will click login button[0m                                     [90m# MyntraLoginpageStep.user_will_click_login_button()[0m
+    [32mThen [0m[32mBrowser will display Login page[0m                                 [90m# MyntraLoginpageStep.browser_will_display_Login_page()[0m
+    [32mAnd [0m[32mLogin not success message display[0m                                [90m# MyntraLoginpageStep.verifyloginNotSuccess()[0m
+
+  Scenario Outline: 3.Valid user with valid password Data Driven [90m# src/test/resources/Myntrafeatures/Myntralogin.feature:31[0m
+    [36mGiven Not a valid user[0m
+    [36mWhen User will browse to the site[0m
+    [36mThen Myntra home page should display[0m
+    [36mWhen User will click login link[0m
+    [36mThen Browser will display Login page[0m
+    [36mWhen User will enter user email as "<EmailAddress>"[0m
+    [36mAnd User will enter password as "<Password>"[0m
+    [36mAnd User will click login button[0m
+    [36mThen Home page will display[0m
+    [36mAnd login success message display[0m
+
+    Examples: 
+
+  Scenario Outline: 3.Valid user with valid password Data Driven [90m# src/test/resources/Myntrafeatures/Myntralogin.feature:44[0m
+    [32mGiven [0m[32mNot a valid user[0m                                       [90m# MyntraCommonStep.not_a_valid_user()[0m
+    [32mWhen [0m[32mUser will browse to the site[0m                            [90m# MyntraCommonStep.user_wiil_browse_to_the_site()[0m
+    [32mThen [0m[32mMyntra home page should display[0m                         [90m# MyntraHomePageStep.myntra_home_page_should_display()[0m
+    [32mWhen [0m[32mUser will click login link[0m                              [90m# MyntraHomePageStep.user_will_click_login_link()[0m
+    [32mThen [0m[32mBrowser will display Login page[0m                         [90m# MyntraLoginpageStep.browser_will_display_Login_page()[0m
+    [32mWhen [0m[32mUser will enter user email as "[0m[32m[1mahmedsohel440@gmail.com[0m[32m"[0m [90m# MyntraLoginpageStep.user_will_enter_user_email_as(String)[0m
+    [32mAnd [0m[32mUser will enter password as "[0m[32m[1mSohel@123[0m[32m"[0m                  [90m# MyntraLoginpageStep.user_wiil_enter_password_as(String)[0m
+    [32mAnd [0m[32mUser will click login button[0m                             [90m# MyntraLoginpageStep.user_will_click_login_button()[0m
+    [32mThen [0m[32mHome page will display[0m                                  [90m# MyntraHomePageStep.home_page_will_display()[0m
+    [32mAnd [0m[32mlogin success message display[0m                            [90m# MyntraHomePageStep.login_success_message_will_display()[0m
+
+  Scenario Outline: 3.Valid user with valid password Data Driven [90m# src/test/resources/Myntrafeatures/Myntralogin.feature:45[0m
+    [32mGiven [0m[32mNot a valid user[0m                                       [90m# MyntraCommonStep.not_a_valid_user()[0m
+    [32mWhen [0m[32mUser will browse to the site[0m                            [90m# MyntraCommonStep.user_wiil_browse_to_the_site()[0m
+    [32mThen [0m[32mMyntra home page should display[0m                         [90m# MyntraHomePageStep.myntra_home_page_should_display()[0m
+    [32mWhen [0m[32mUser will click login link[0m                              [90m# MyntraHomePageStep.user_will_click_login_link()[0m
+    [32mThen [0m[32mBrowser will display Login page[0m                         [90m# MyntraLoginpageStep.browser_will_display_Login_page()[0m
+    [32mWhen [0m[32mUser will enter user email as "[0m[32m[1msohel.ccna@gmail.com[0m[32m"[0m    [90m# MyntraLoginpageStep.user_will_enter_user_email_as(String)[0m
+    [32mAnd [0m[32mUser will enter password as "[0m[32m[1mSohel@123[0m[32m"[0m                  [90m# MyntraLoginpageStep.user_wiil_enter_password_as(String)[0m
+    [32mAnd [0m[32mUser will click login button[0m                             [90m# MyntraLoginpageStep.user_will_click_login_button()[0m
+    [32mThen [0m[32mHome page will display[0m                                  [90m# MyntraHomePageStep.home_page_will_display()[0m
+    [32mAnd [0m[32mlogin success message display[0m                            [90m# MyntraHomePageStep.login_success_message_will_display()[0m

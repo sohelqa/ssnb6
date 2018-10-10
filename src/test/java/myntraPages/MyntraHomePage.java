@@ -52,6 +52,8 @@ public class MyntraHomePage {
 
 
 		public void verifyLoginSuccess () throws InterruptedException{
+		
+			
 			
 			Thread.sleep(5000);
 			
@@ -61,13 +63,13 @@ public class MyntraHomePage {
 			
 			Thread.sleep(5000);
 		  
-			WebElement verifyValidlogin=DriverFactory.getInstance().getDriver().findElement(By.xpath("//div[@data-reactid='521']"));
+			WebElement verifyValidlogin=DriverFactory.getInstance().getDriver().findElement(By.xpath("//a[@data-reactid='521']"));
 			String verifyUserisloggedin=verifyValidlogin.getText();
 			System.out.println(verifyUserisloggedin);
 			
 			Thread.sleep(5000);
-			
-			Assert.assertEquals("ahmedsohel440@gmail.com", verifyUserisloggedin);
+					
+			Assert.assertEquals(MyntraLoginPage.emailAddress(), verifyUserisloggedin);
 		    
 		}
 		

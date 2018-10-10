@@ -1,4 +1,4 @@
-package com.bddmyntra.framework;
+package myntraPages;
 
 import myntraPages.MyntraHomePage;
 import myntraPages.MyntraLoginPage;

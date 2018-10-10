@@ -24,9 +24,9 @@ public class DriverFactory {
 	
 	private static String LOCAL_GRID_URL = "http://192.168.0.5:3333/wd/hub";
 	
-//	public static final String CLOUD_USERNAME = "sohelahmed2";
-//	public static final String CLOUD_AUTOMATE_KEY = "DAYrusNSXwZrPKF2NLmy";
-//	public static final String CLOUD_URL = "https://" + CLOUD_USERNAME + ":" + CLOUD_AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+	public static final String CLOUD_USERNAME = "sohelahmed2";
+	public static final String CLOUD_AUTOMATE_KEY = "DAYrusNSXwZrPKF2NLmy";
+	public static final String CLOUD_URL = "https://" + CLOUD_USERNAME + ":" + CLOUD_AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
 
 	
@@ -94,71 +94,71 @@ public class DriverFactory {
 		                e.printStackTrace();
 		            }
 			}
-//			else if(browser.toUpperCase().contentEquals("CLOUD-CH")) {
-//				DesiredCapabilities caps = new DesiredCapabilities();
-//			    caps.setCapability("browser", "Chrome");
-//			    caps.setCapability("browser_version", "69.0 beta");
-//			    caps.setCapability("os", "Windows");
-//			    caps.setCapability("os_version", "7");
-//			    caps.setCapability("resolution", "1920x1080");
-//			    
-//		         try {
-//		        	 WebDriver driver = new RemoteWebDriver(new URL(CLOUD_URL),caps);
-//		             instance.driverCollection.set(driver);
-//		            } catch (MalformedURLException e) {
-//		                e.printStackTrace();
-//		            }
-//			}
-//			else if(browser.toUpperCase().contentEquals("CLOUD-CH-MAC")) {
-//				DesiredCapabilities caps = new DesiredCapabilities();
-//			    caps.setCapability("browser", "Chrome");
-//			    caps.setCapability("browser_version", "65.0");
-//			    caps.setCapability("os", "OS X");
-//			    caps.setCapability("os_version", "High Sierra");
-//			    caps.setCapability("resolution", "1920x1080");
-//			    caps.setCapability("browserstack.debug","true");
-//			    
-//		         try {
-//		        	 WebDriver driver = new RemoteWebDriver(new URL(CLOUD_URL),caps);
-//		             instance.driverCollection.set(driver);
-//		            } catch (MalformedURLException e) {
-//		                e.printStackTrace();
-//		            }
-//			}
-//			else if(browser.toUpperCase().contentEquals("CLOUD-SAF-MAC")) {
-//				DesiredCapabilities caps = new DesiredCapabilities();
-//			    caps.setCapability("browser", "Safari");
-//			    caps.setCapability("browser_version", "10.1");
-//			    caps.setCapability("os", "OS X");
-//			    caps.setCapability("os_version", "Sierra");
-//			    caps.setCapability("resolution", "1920x1080");
-//
-//			    
-//		         try {
-//		        	 WebDriver driver = new RemoteWebDriver(new URL(CLOUD_URL),caps);
-//		             instance.driverCollection.set(driver);
-//		            } catch (MalformedURLException e) {
-//		                e.printStackTrace();
-//		            }
-//			}
-//			else if(browser.toUpperCase().contentEquals("CLOUD")) {
-//				MyntraPropertyReaderService property = MyntraPropertyReaderService.getInstance();
-//				
-//				DesiredCapabilities caps = new DesiredCapabilities();
-//			    caps.setCapability("browser", property.getProperty("CLOUD_BROWSER"));
-//			    caps.setCapability("browser_version", property.getProperty("CLOUD_BROWSER_VERSION"));
-//			    caps.setCapability("os", property.getProperty("CLOUD_OS"));
-//			    caps.setCapability("os_version", property.getProperty("CLOUD_OS_VERSION"));
-//			    caps.setCapability("resolution", property.getProperty("CLOUD_RESULATION"));
-//			    caps.setCapability("browserstack.debug",property.getProperty("CLOUD_DEBUG"));
-//			    
-//		         try {
-//		        	 WebDriver driver = new RemoteWebDriver(new URL(CLOUD_URL),caps);
-//		             instance.driverCollection.set(driver);
-//		            } catch (MalformedURLException e) {
-//		                e.printStackTrace();
-//		            }
-//			}
+			else if(browser.toUpperCase().contentEquals("CLOUD-CH")) {
+				DesiredCapabilities caps = new DesiredCapabilities();
+			    caps.setCapability("browser", "Chrome");
+			    caps.setCapability("browser_version", "69.0 beta");
+			    caps.setCapability("os", "Windows");
+			    caps.setCapability("os_version", "7");
+			    caps.setCapability("resolution", "1920x1080");
+			    
+		         try {
+		        	 WebDriver driver = new RemoteWebDriver(new URL(CLOUD_URL),caps);
+		             instance.driverCollection.set(driver);
+		            } catch (MalformedURLException e) {
+		                e.printStackTrace();
+		            }
+			}
+			else if(browser.toUpperCase().contentEquals("CLOUD-CH-MAC")) {
+				DesiredCapabilities caps = new DesiredCapabilities();
+			    caps.setCapability("browser", "Chrome");
+			    caps.setCapability("browser_version", "65.0");
+			    caps.setCapability("os", "OS X");
+			    caps.setCapability("os_version", "High Sierra");
+			    caps.setCapability("resolution", "1920x1080");
+			    caps.setCapability("browserstack.debug","true");
+			    
+		         try {
+		        	 WebDriver driver = new RemoteWebDriver(new URL(CLOUD_URL),caps);
+		             instance.driverCollection.set(driver);
+		            } catch (MalformedURLException e) {
+		                e.printStackTrace();
+		            }
+			}
+			else if(browser.toUpperCase().contentEquals("CLOUD-SAF-MAC")) {
+				DesiredCapabilities caps = new DesiredCapabilities();
+			    caps.setCapability("browser", "Safari");
+			    caps.setCapability("browser_version", "10.1");
+			    caps.setCapability("os", "OS X");
+			    caps.setCapability("os_version", "Sierra");
+			    caps.setCapability("resolution", "1920x1080");
+
+			    
+		         try {
+		        	 WebDriver driver = new RemoteWebDriver(new URL(CLOUD_URL),caps);
+		             instance.driverCollection.set(driver);
+		            } catch (MalformedURLException e) {
+		                e.printStackTrace();
+		            }
+			}
+			else if(browser.toUpperCase().contentEquals("CLOUD")) {
+				MyntraPropertyReaderService property = MyntraPropertyReaderService.getInstance();
+				
+				DesiredCapabilities caps = new DesiredCapabilities();
+			    caps.setCapability("browser", property.getProperty("CLOUD_BROWSER"));
+			    caps.setCapability("browser_version", property.getProperty("CLOUD_BROWSER_VERSION"));
+			    caps.setCapability("os", property.getProperty("CLOUD_OS"));
+			    caps.setCapability("os_version", property.getProperty("CLOUD_OS_VERSION"));
+			    caps.setCapability("resolution", property.getProperty("CLOUD_RESULATION"));
+			    caps.setCapability("browserstack.debug",property.getProperty("CLOUD_DEBUG"));
+			    
+		         try {
+		        	 WebDriver driver = new RemoteWebDriver(new URL(CLOUD_URL),caps);
+		             instance.driverCollection.set(driver);
+		            } catch (MalformedURLException e) {
+		                e.printStackTrace();
+		            }
+			}
 			else {
 				ChromeDriverManager.getInstance().setup();
 				WebDriver driver = new ChromeDriver();

@@ -1,12 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="32.874575">
-<testcase classname="Myntra login functionality - 1" name="1.Valid user with valid password" time="32.874575">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="213.476024">
+<testcase classname="Myntra login functionality - 1" name="1.Valid user with valid password" time="48.30364">
 <system-out><![CDATA[Given Not a valid user......................................................passed
 When User will browse to the site...........................................passed
 Then Myntra home page should display........................................passed
 When User will click login link.............................................passed
 Then Browser will display Login page........................................passed
 When User will enter user email as "ahmedsohel440@gmail.com"................passed
+And User will enter password as "Sohel@123".................................passed
+And User will click login button............................................passed
+Then Home page will display.................................................passed
+And login success message display...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Myntra login functionality - 1" name="2.InValid user with valid password" time="33.072168">
+<system-out><![CDATA[Given Not a valid user......................................................passed
+When User will browse to the site...........................................passed
+Then Myntra home page should display........................................passed
+When User will click login link.............................................passed
+Then Browser will display Login page........................................passed
+When User will enter user email as "Invalid_ahmedsohel440@gmail.com"........passed
+And User will enter password as "Sohel@123".................................passed
+And User will click login button............................................passed
+Then Browser will display Login page........................................passed
+And Login not success message display.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Myntra login functionality - 1" name="3.Valid user with valid password Data Driven" time="59.93689">
+<system-out><![CDATA[Given Not a valid user......................................................passed
+When User will browse to the site...........................................passed
+Then Myntra home page should display........................................passed
+When User will click login link.............................................passed
+Then Browser will display Login page........................................passed
+When User will enter user email as "ahmedsohel440@gmail.com"................passed
+And User will enter password as "Sohel@123".................................passed
+And User will click login button............................................passed
+Then Home page will display.................................................passed
+And login success message display...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Myntra login functionality - 1" name="3.Valid user with valid password Data Driven 2" time="72.163326">
+<system-out><![CDATA[Given Not a valid user......................................................passed
+When User will browse to the site...........................................passed
+Then Myntra home page should display........................................passed
+When User will click login link.............................................passed
+Then Browser will display Login page........................................passed
+When User will enter user email as "sohel.ccna@gmail.com"...................passed
 And User will enter password as "Sohel@123".................................passed
 And User will click login button............................................passed
 Then Home page will display.................................................passed

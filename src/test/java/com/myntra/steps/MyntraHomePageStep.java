@@ -1,10 +1,9 @@
 package com.myntra.steps;
 
-import com.bddmyntra.framework.PageFactory;
-
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import myntraPages.MyntraHomePage;
+import myntraPages.PageFactory;
 
 public class MyntraHomePageStep extends MyntraBaseStep {
 	
