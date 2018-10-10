@@ -75,11 +75,11 @@
             <version>3.17</version>
         </dependency>
         
-        <dependency>
+       <!--  <dependency>
            <groupId>com.github.temyers</groupId>
            <artifactId>cucumber-jvm-parallel-plugin</artifactId>
            <version>5.0.0</version>
-       </dependency>
+       </dependency> -->
         <!-- <dependency>
         	<groupId>com.paxovision</groupId>
             <artifactId>jira-client</artifactId>
@@ -110,22 +110,10 @@
             </plugin>
             
             <!-- This for parallel execution -->
-			<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.20.1</version>
-                <configuration>
-                    <includes>
-                        <include>**/*IT.class</include>
-                    </includes>
-                    <forkCount>4</forkCount>
-                    <reuseForks>true</reuseForks>
-                    <testFailureIgnore>true</testFailureIgnore>
-                </configuration>
-            </plugin>
 			
-			<!-- This is for running form command line -->
-			<!--  
+			
+			 <!-- This is for running form command line -->
+			 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -139,9 +127,9 @@
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
-              -->
+              
 
-            <plugin>
+           <!--  <plugin>
                 <groupId>com.github.temyers</groupId>
                 <artifactId>cucumber-jvm-parallel-plugin</artifactId>
                 <version>2.1.0</version>
@@ -153,38 +141,38 @@
                             <goal>generateRunners</goal>
                         </goals>
                         <configuration>
-                            <!-- Mandatory -->
-                            <!-- comma separated list of package names to scan for glue code -->
+                            Mandatory
+                            comma separated list of package names to scan for glue code
                             <glue>com.shiftedtech.steps</glue>
                             <outputDirectory>${project.build.directory}/generated-test-sources/cucumber</outputDirectory>
-                            <!-- The directory, which must be in the root of the runtime classpath, containing your feature files.  -->
+                            The directory, which must be in the root of the runtime classpath, containing your feature files. 
                             <featuresDirectory>src/test/resources/features/</featuresDirectory>
-                            <!-- Directory where the cucumber report files shall be written  -->
+                            Directory where the cucumber report files shall be written 
                             <cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>
-                            <!-- comma separated list of output formats json,html,rerun.txt -->
+                            comma separated list of output formats json,html,rerun.txt
                             <format>json</format>
-                            <!-- CucumberOptions.strict property -->
+                            CucumberOptions.strict property
                             <strict>true</strict>
-                            <!-- CucumberOptions.monochrome property -->
+                            CucumberOptions.monochrome property
                             <monochrome>false</monochrome>
-                            <!-- The tags to run, maps to CucumberOptions.tags property you can pass ANDed tags like "@tag1","@tag2" and ORed tags like "@tag1,@tag2,@tag3" -->
+                            The tags to run, maps to CucumberOptions.tags property you can pass ANDed tags like "@tag1","@tag2" and ORed tags like "@tag1,@tag2,@tag3"
                             <tags></tags>
-                            <!-- If set to true, only feature files containing the required tags shall be generated. -->
+                            If set to true, only feature files containing the required tags shall be generated.
                             <filterFeaturesByTags>true</filterFeaturesByTags>
-                            <!-- Generate TestNG runners instead of default JUnit ones. -->
+                            Generate TestNG runners instead of default JUnit ones.
                             <useTestNG>false</useTestNG>
-                            <!-- The naming scheme to use for the generated test classes.  One of 'simple' or 'feature-title' -->
+                            The naming scheme to use for the generated test classes.  One of 'simple' or 'feature-title'
                             <namingScheme>simple</namingScheme>
-                            <!-- The class naming pattern to use.  Only required/used if naming scheme is 'pattern'.-->
+                            The class naming pattern to use.  Only required/used if naming scheme is 'pattern'.
                             <namingPattern>Parallel{c}IT</namingPattern>
-                            <!-- One of [SCENARIO, FEATURE]. SCENARIO generates one runner per scenario.  FEATURE generates a runner per feature. -->
+                            One of [SCENARIO, FEATURE]. SCENARIO generates one runner per scenario.  FEATURE generates a runner per feature.
                             <parallelScheme>SCENARIO</parallelScheme>
-                            <!-- This is optional, required only if you want to specify a custom template for the generated sources (this is a relative path) -->
-                           <!-- <customVmTemplate>src/test/resources/cucumber-custom-runner.vm</customVmTemplate>-->
+                            This is optional, required only if you want to specify a custom template for the generated sources (this is a relative path)
+                           <customVmTemplate>src/test/resources/cucumber-custom-runner.vm</customVmTemplate>
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
 
 			<!-- Cucumber reporting -->
             <plugin>
